@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboTeknologies Learning Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Bootstrap CSS -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand" href="/"> {{ user_manager.app_name }} </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About RoboTeknologies</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ml-auto"> <!-- "ml-auto" class pushes this to the right -->
+            <a class="nav-link" href="/signin">Sign In</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container mt-4">
+        <h1 class="text-center">Welcome to RoboTek Academy</h1>
+
+        <hr> <!-- Add a horizontal line to separate content -->
+
+        <h2 class="text-center">Available Courses</h2>
+
+        <!-- Course Cards -->
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this block for each course -->
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Course Title</h5>
+                        <p class="card-text">Course description goes here.</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat this block for each course -->
+        </div>
+
+        <hr> <!-- Add another horizontal line to separate content -->
+
+        <!-- "View More" Button -->
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg">View More</a>
+        </div>
+
+        <hr> <!-- Add another horizontal line to separate content -->
+
+        <!-- Getting Started Button -->
+        <div class="text-center mt-4">
+            <a href="/register" class="btn btn-primary btn-lg">Getting Started</a>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery (for Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-2">
+        <div class="container py-2 text-center">
+            &copy;  {{ user_manager.app_name }} 2023 RoboTeknologies Learning Management System
+        </div>
+    </footer>
+</body>
+</html>

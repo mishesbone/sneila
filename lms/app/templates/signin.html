@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Bootstrap CSS -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand" href="/">{{ user_manager.app_name }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown"> <!-- Dropdown for Home -->
+                    <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Home
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="homeDropdown">
+                        <!-- Home dropdown items -->
+                        <a class="dropdown-item" href="/home">Home</a>
+                        <a class="dropdown-item" href="/home2">Home</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown"> <!-- Dropdown for Programs -->
+                    <a class="nav-link dropdown-toggle" href="#" id="programsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Programs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="programsDropdown">
+                        <!-- Programs dropdown items -->
+                        <a class="dropdown-item" href="/program1">Program 1</a>
+                        <a class="dropdown-item" href="/program2">Program 2</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown"> <!-- Dropdown for Contact Us -->
+                    <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contact Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="contactDropdown">
+                        <!-- Contact Us dropdown items -->
+                        <a class="dropdown-item" href="/contact1">Contact 1</a>
+                        <a class="dropdown-item" href="/contact2">Contact 2</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown"> <!-- Dropdown for About RoboTeknologies -->
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About RoboTeknologies
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <!-- About RoboTeknologies dropdown items -->
+                        <a class="dropdown-item" href="/about1">About 1</a>
+                        <a class="dropdown-item" href="/about2">About 2</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ml-auto">
+            <a class="nav-link" href="/signup">Sign Up</a>
+        </div>
+    </nav>
+
+   <!-- Main Content Container with Card -->
+<div class="container mt-4">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title text-center">Sign In</h1>
+                    <!-- Login Form -->
+                    <form method="POST">
+                        {{ form.hidden_tag() }}
+                        <div class="form-group">
+                            {{ form.email.label }}
+                            {{ form.email(class="form-control", size=30) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.password.label }}
+                            {{ form.password(class="form-control", size=20) }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-primary btn-block") }}
+                        </div>
+                        <div class="form-group text-center">
+                            <a href="/forgot-password">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-2 fixed-bottom">
+        <div class="container">
+            <div class="text-center">
+                &copy; {{ user_manager.app_name }} 2023 RoboTeknologies Learning Management System
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include Bootstrap JS and jQuery (for Bootstrap features) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

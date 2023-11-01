@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>{{ course.title }}</h1>
+    <p>{{ course.description }}</p>
+    
+    {% if current_user.is_authenticated %}
+        <form action="{{ url_for('enroll', course_id=course.id) }}" method="post">
+            <button type="submit">Enroll in Course</button>
+        </form>
+    {% else %}
+        <p>Please <a href="{{ url_for('login') }}">login</a> to enroll in this course.</p>
+    {% endif %}
+    
+    <h2>Enrolled Students</h2>
+    <ul>
+        {% for enrollment in course.enrollments %}
+            <li>{{ enrollment.user.username }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
